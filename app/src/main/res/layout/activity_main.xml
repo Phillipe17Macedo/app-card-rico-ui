@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     android:background="#F2F2F2">
 
+    <!-- Cartão de crédito -->
     <androidx.cardview.widget.CardView
         android:id="@+id/credit_card"
         android:layout_width="300dp"
@@ -18,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="#000">
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Aplicar gradiente aqui no ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#003366">
+            android:background="@drawable/credit_card_gradient"> <!-- Gradiente aplicado aqui -->
 
             <TextView
                 android:id="@+id/visa_logo"
