@@ -8,7 +8,6 @@
     tools:context=".MainActivity"
     android:background="#F2F2F2">
 
-    <!-- Cartão de crédito -->
     <androidx.cardview.widget.CardView
         android:id="@+id/credit_card"
         android:layout_width="300dp"
@@ -21,12 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Aplicar gradiente aqui no ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/credit_card_gradient"> <!-- Gradiente aplicado aqui -->
+            android:background="@drawable/credit_card_gradient"> <!-- Fundo com gradiente -->
 
+            <!-- Logo Visa -->
             <TextView
                 android:id="@+id/visa_logo"
                 android:layout_width="wrap_content"
@@ -39,6 +38,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_margin="16dp" />
 
+            <!-- Texto Infinite -->
             <TextView
                 android:id="@+id/infinite_text"
                 android:layout_width="wrap_content"
@@ -51,6 +51,61 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp" />
 
+            <!-- Número do cartão -->
+            <EditText
+                android:id="@+id/card_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:hint="**** **** **** 1234"
+                android:inputType="number"
+                android:maxLength="19"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infinite_text" />
+
+            <!-- Nome do titular -->
+            <EditText
+                android:id="@+id/card_holder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@android:color/transparent"
+                android:hint="Nome do Titular"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Data de validade -->
+            <EditText
+                android:id="@+id/card_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@android:color/transparent"
+                android:hint="MM/AA"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Logo Rico -->
             <TextView
                 android:id="@+id/rico_logo"
                 android:layout_width="wrap_content"
